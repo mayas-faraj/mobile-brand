@@ -8,18 +8,21 @@ import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 const Hero = ({
   listUser = [
     {
-      name: "Users",
-      number: "390",
+      name: "Preferred Partner",
+      text: "Distribution & fullfillment partner for smartphone & feature phones for 5 brands",
+      number: "5",
       icon: "/assets/Icon/heroicons_sm-user.svg",
     },
     {
-      name: "Locations",
-      number: "20",
+      name: "Worldwide Network",
+      text: "Our Far Reaching markets are managing up close, up to 568 locations",
+      number: "568",
       icon: "/assets/Icon/gridicons_location.svg",
     },
     {
-      name: "Server",
-      number: "50",
+      name: "Engaging Markets",
+      text: "Supply chain solutions and channel development for more than 230 markets",
+      number: "230",
       icon: "/assets/Icon/bx_bxs-server.svg",
     },
   ],
@@ -37,18 +40,17 @@ const Hero = ({
             variants={scrollAnimation}>
             <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
               <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-                Want anything to be easy with <strong>AmkInt</strong>.
+              Partnered with Samsung, One-Plus and <strong>More</strong>.
               </h1>
               <p className="text-black-500 mt-4 mb-6">
-                Provide a network for all your needs with ease and fun using
-                AmkInt discover interesting features from us.
+              We understand the importance of staying up-to-date with the latest technology, which is why we bring you the latest models from our partnered brands
               </p>
-              <ButtonPrimary>Get Started</ButtonPrimary>
+              <ButtonPrimary>Read more</ButtonPrimary>
             </div>
             <div className="flex w-full">
               <motion.div className="h-full w-full" variants={scrollAnimation}>
                 <Image
-                  src="/assets/Illustration1.png"
+                  src="/assets/mobiles.png"
                   alt="Amk-Int"
                   quality={100}
                   width={612}
@@ -62,7 +64,7 @@ const Hero = ({
       <div className="relative w-full flex">
         <ScrollAnimationWrapper
           className="rounded-lg w-full grid grid-flow-row sm:grid-flow-row grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-gray-100 bg-white-500 z-10">
-          {listUser.map((listUsers, index) => (
+          {listUser.map((listUsers, index) => (<div>
             <motion.div
               className="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0"
               key={index}
@@ -81,6 +83,8 @@ const Hero = ({
                 </div>
               </div>
             </motion.div>
+            <p className="text-center p-5">{listUsers.text}</p>
+            </div>
           ))}
        </ScrollAnimationWrapper>
        <div

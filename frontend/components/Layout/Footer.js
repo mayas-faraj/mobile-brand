@@ -10,8 +10,7 @@ const Footer = () => {
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start ">
         <img src={logoAmkint.src} alt="amkint-logo" className="h-8 w-auto" />
           <p className="mb-4">
-            <strong className="font-medium">AmkInt</strong> is a private
-            virtual network that has unique features and has high security.
+            <strong className="font-medium">AmkInt</strong> is a mobile trading company based in the UAE.
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
             <div className="mx-2 bg-white-500 rounded-full items-center justify-center flex p-2 shadow-md">
@@ -38,29 +37,11 @@ const Footer = () => {
             <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
               Locations{" "}
             </li>
-            <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              Server{" "}
-            </li>
-            <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              Countries{" "}
-            </li>
-            <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              Blog{" "}
-            </li>
           </ul>
         </div>
         <div className="row-span-2 sm:col-span-2 sm:col-start-9 sm:col-end-11 flex flex-col">
           <p className="text-black-600 mb-4 font-medium text-lg">Engage</p>
           <ul className="text-black-500">
-            <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              AmkInt ?{" "}
-            </li>
-            <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              FAQ{" "}
-            </li>
-            <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
-              Tutorials{" "}
-            </li>
             <li className="my-2 hover:text-orange-500 cursor-pointer transition-all">
               About Us{" "}
             </li>

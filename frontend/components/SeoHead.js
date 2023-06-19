@@ -146,11 +146,6 @@ const favicons = [
     href: '/favicon/apple-icon-180x180.png',
   },
   {
-    rel: 'mask-icon',
-    href: '/favicon/safari-pinned-tab.svg',
-    color: '#F59A9A',
-  },
-  {
     rel: 'icon',
     href: '/favicon/favicon.ico',
   },

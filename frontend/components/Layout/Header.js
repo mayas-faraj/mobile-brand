@@ -60,52 +60,34 @@ const Header = () => {
                   : " text-black-500 hover:text-orange-500 ")
               }
             >
-              Feature
+              Services
             </LinkScroll>
             <LinkScroll
               activeClass="active"
-              to="pricing"
+              to="query"
               spy={true}
               smooth={true}
               duration={1000}
               onSetActive={() => {
-                setActiveLink("pricing");
+                setActiveLink("query");
               }}
               className={
                 "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "pricing"
+                (activeLink === "query"
                   ? " text-orange-500 animation-active "
                   : " text-black-500 hover:text-orange-500 ")
               }
             >
-              Pricing
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
-              to="testimoni"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("testimoni");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "testimoni"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
-              }
-            >
-              Testimonial
+              Send Query
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
             <Link href="/">
               <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
-                  Sign In
+                  About Us
               </a>
             </Link>
-            <ButtonOutline>Sign Up</ButtonOutline>
+            <ButtonOutline>Contact Us</ButtonOutline>
           </div>
         </nav>
       </header>
