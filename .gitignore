@@ -1,0 +1,60 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+package-lock.json
+
+/frontend/.pnp
+/frontend/.json/
+/frontend/.pnp.js
+
+# testing
+/frontend/coverage
+/cms/testApp
+/cms/coverage
+
+
+# next.js
+/frontend/.next/
+/frontend/out/
+
+# production
+/frontend/build
+
+# misc
+.DS_Store
+*.pem
+/docs/.ps
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env*.local
+
+# vercel
+/frontend/.vercel
+
+# typescript
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+# nodejs
+lib-cov
+lcov.info
+pids
+logs
+results
+node_modules
+.node_history
+
+# strapi
+/cms/license.txt
+/cms/exports
+/cms/*.cache
+/cms/dist
+/cms/build
+/cms/.strapi-updater.json
