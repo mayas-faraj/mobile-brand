@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 // Import react scroll
 import { Link as LinkScroll } from "react-scroll";
-import ButtonOutline from "../misc/ButtonOutline.";
 import logoAmkint from "../../public/assets/amk-int-logo.png";
 
-const Header = () => {
+const Header = ({ isHome }) => {
   const [activeLink, setActiveLink] = useState(null);
   const [scrollActive, setScrollActive] = useState(false);
   useEffect(() => {
@@ -23,71 +22,83 @@ const Header = () => {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <img src={logoAmkint.src} alt="amkint-logo" className="h-8 w-auto" />
-          </div>
-          <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
-            <LinkScroll
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("about");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "about"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 a")
-              }
-            >
-              About
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
-              to="feature"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("feature");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "feature"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
-              }
-            >
-              Services
-            </LinkScroll>
-            <LinkScroll
-              activeClass="active"
-              to="query"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("query");
-              }}
-              className={
-                "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
-                (activeLink === "query"
-                  ? " text-orange-500 animation-active "
-                  : " text-black-500 hover:text-orange-500 ")
-              }
-            >
-              Send Query
-            </LinkScroll>
-          </ul>
-          <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
             <Link href="/">
-              <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
-                  About Us
+              <a>
+                <img src={logoAmkint.src} alt="amkint-logo" className="h-8 w-auto" />
               </a>
             </Link>
-            <ButtonOutline>Contact Us</ButtonOutline>
+          </div>
+          {
+            isHome && (
+              <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
+                <LinkScroll
+                  activeClass="active"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  onSetActive={() => {
+                    setActiveLink("about");
+                  }}
+                  className={
+                    "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                    (activeLink === "about"
+                      ? " text-orange-500 animation-active "
+                      : " text-black-500 hover:text-orange-500 a")
+                  }
+                >
+                  About
+                </LinkScroll>
+                <LinkScroll
+                  activeClass="active"
+                  to="feature"
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  onSetActive={() => {
+                    setActiveLink("feature");
+                  }}
+                  className={
+                    "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                    (activeLink === "feature"
+                      ? " text-orange-500 animation-active "
+                      : " text-black-500 hover:text-orange-500 ")
+                  }
+                >
+                  Services
+                </LinkScroll>
+                <LinkScroll
+                  activeClass="active"
+                  to="query"
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  onSetActive={() => {
+                    setActiveLink("query");
+                  }}
+                  className={
+                    "px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative" +
+                    (activeLink === "query"
+                      ? " text-orange-500 animation-active "
+                      : " text-black-500 hover:text-orange-500 ")
+                  }
+                >
+                  Send Query
+                </LinkScroll>
+              </ul>
+            )
+          }
+          <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
+            <Link href="/about-us">
+              <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
+                About Us
+              </a>
+            </Link>
+            <Link href="/contact-us">
+              <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all">
+                Contact Us
+              </a>
+            </Link>
           </div>
         </nav>
       </header>
