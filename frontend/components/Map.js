@@ -23,10 +23,10 @@ const Map = () => {
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto">
+              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white-500 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto">
               AmkInt Store and POS
             </motion.h3>
-            <motion.p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12" variants={scrollAnimation}>
+            <motion.p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12 text-white-300" variants={scrollAnimation}>
               Our POS and stores around the world
             </motion.p>
           </ScrollAnimationWrapper>
@@ -38,10 +38,10 @@ const Map = () => {
           <ScrollAnimationWrapper>
             <motion.h3
               variants={scrollAnimation}
-              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto">
+              className="text-2xl sm:text-3xl lg:text-4xl font-medium text-white-500 leading-relaxed w-9/12 sm:w-6/12 lg:w-4/12 mx-auto">
               Brand Partners
             </motion.h3>
-            <motion.p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12" variants={scrollAnimation}>
+            <motion.p className="leading-normal  mx-auto my-2 w-10/12 sm:w-7/12 lg:w-6/12 text-white-300" variants={scrollAnimation}>
               We provide a host of effective distribution services allowing device manufacturers to focus on their core competencies. We constantly deploy resources to improve supply chain efficiencies and increase channel penetration in order to drive demand and enhance end-user satisfaction..
             </motion.p>
             <motion.div className="w-full flex justify-evenly items-center mt-4 flex-wrap lg:flex-nowrap bg-white-500 rounded-lg p-8" variants={scrollAnimation}>
