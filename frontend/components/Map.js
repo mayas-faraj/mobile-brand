@@ -48,7 +48,7 @@ const Map = () => {
               {/* <Netflix className="h-18 w-auto" /> */}
               {
                 brands.map(({ name, image }) => (
-                  <div>
+                  <div key={name}>
                     <img
                       src={"/assets/brands/" + image}
                       className="h-14 w-auto mt-4 lg:mt-2"

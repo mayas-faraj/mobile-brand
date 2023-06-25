@@ -1,9 +1,14 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import ButtonPrimary from "./misc/ButtonPrimary";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+import "swiper/css";
+import "swiper/css/autoplay";
+import Link from "next/link";
 
 const Hero = ({
   listUser = [
@@ -35,31 +40,62 @@ const Hero = ({
       id="about"
     >
       <ScrollAnimationWrapper>
-          <motion.div
-            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
-            variants={scrollAnimation}>
-            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-              Partnered with Samsung, One-Plus and <strong>More</strong>.
-              </h1>
-              <p className="text-black-500 mt-4 mb-6">
-              We understand the importance of staying up-to-date with the latest technology, which is why we bring you the latest models from our partnered brands
-              </p>
-              <ButtonPrimary>Read more</ButtonPrimary>
-            </div>
-            <div className="flex w-full">
-              <motion.div className="h-full w-full" variants={scrollAnimation}>
-                <Image
-                  src="/assets/mobiles.png"
-                  alt="Amk-Int"
-                  quality={100}
-                  width={612}
-                  height={383}
-                  layout="responsive"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
+        <Swiper slidesPerView={1} loop={true} modules={[Autoplay]} autoplay={{ delay: 3000 }}>
+          <SwiperSlide>
+            <motion.div
+              className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+              variants={scrollAnimation}>
+              <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
+                  Partnered with Samsung, One-Plus and <strong>More</strong>.
+                </h1>
+                <p className="text-black-500 mt-4 mb-6">
+                  We understand the importance of staying up-to-date with the latest technology, which is why we bring you the latest models from our partnered brands
+                </p>
+                <ButtonPrimary><Link href="/about-us"><a>Read more</a></Link></ButtonPrimary>
+              </div>
+              <div className="flex w-full">
+                <motion.div className="h-full w-full" variants={scrollAnimation}>
+                  <Image
+                    src="/assets/mobiles.png"
+                    alt="Amk-Int"
+                    quality={100}
+                    width={612}
+                    height={383}
+                    layout="responsive"
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <motion.div
+              className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+              variants={scrollAnimation}>
+              <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
+                  We provide a host of <strong>effective</strong> distribution services.
+                </h1>
+                <p className="text-black-500 mt-4 mb-6">
+                  allowing device manufacturers to focus on their core competencies
+                </p>
+                <ButtonPrimary><Link href="/about-us"><a>Read more</a></Link></ButtonPrimary>
+              </div>
+              <div className="flex w-full">
+                <motion.div className="h-full w-full" variants={scrollAnimation}>
+                  <Image
+                    src="/assets/mobile.png"
+                    alt="Amk-Int"
+                    quality={100}
+                    width={612}
+                    height={383}
+                    layout="responsive"
+                  />
+                </motion.div>
+              </div>
+            </motion.div>
+          </SwiperSlide>
+        </Swiper>
       </ScrollAnimationWrapper>
       <div className="relative w-full flex">
         <ScrollAnimationWrapper
@@ -68,7 +104,7 @@ const Hero = ({
             <motion.div
               className="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0"
               key={index}
-              custom={{duration: 2 + index}}
+              custom={{ duration: 2 + index }}
               variants={scrollAnimation}
             >
               <div className="flex mx-auto w-40 sm:w-auto">
@@ -84,13 +120,13 @@ const Hero = ({
               </div>
             </motion.div>
             <p className="text-center p-5">{listUsers.text}</p>
-            </div>
+          </div>
           ))}
-       </ScrollAnimationWrapper>
-       <div
+        </ScrollAnimationWrapper>
+        <div
           className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0"
           style={{ filter: "blur(114px)" }}
-       ></div>
+        ></div>
       </div>
     </div>
   );
